@@ -1,0 +1,6 @@
+com\mycompany\httpurl\URLReader.class
+com\mycompany\httpurl\HttpServer.class
+com\mycompany\httpurl\EchoClient.class
+com\mycompany\httpurl\HttpURL.class
+com\mycompany\httpurl\URLParser.class
+com\mycompany\httpurl\EchoServer.class
