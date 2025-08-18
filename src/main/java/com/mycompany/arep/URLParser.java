@@ -1,4 +1,4 @@
-package com.mycompany.httpurl;
+package com.mycompany.arep;
 import java.net.MalformedURLException;
 import java.net.URL;
 /*

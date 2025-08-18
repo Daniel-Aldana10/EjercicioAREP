@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-package com.mycompany.httpurl;
+package com.mycompany.arep;
 import java.io.*;
 import java.net.*;
 import java.util.List;
