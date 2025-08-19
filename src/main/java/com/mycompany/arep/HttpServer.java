@@ -62,6 +62,14 @@ public class HttpServer {
         }
         serverSocket.close();
     }
+    /**
+     * Handles an incoming HTTP request and generates the appropriate response.
+     *
+     * @param uri    the request URI containing the path and query parameters
+     * @param out    the writer to send responses to the client
+     * @param socket the client socket used for file streaming
+     * @throws IOException if an I/O error occurs when handling the request
+     */
     public static void handleRequest(URI uri, PrintWriter out, Socket socket) throws IOException {
         if(uri != null && uri.getPath().startsWith("/app/helloget")){
             String output = greetingService(uri, false);
@@ -90,6 +98,12 @@ public class HttpServer {
         }
 
     }
+    /**
+     * Determines the MIME type of a given file based on its extension.
+     *
+     * @param path the file path whose content type is to be determined
+     * @return the MIME type as a string (e.g., "text/html"), or "application/octet-stream" if unknown
+     */
     public static String getType(Path path){
         if (path == null || path.getFileName() == null) {
             return "application/octet-stream";
@@ -116,6 +130,13 @@ public class HttpServer {
             default -> "application/octet-stream";
         };
     }
+    /**
+     * Generates an HTTP response with a JSON greeting message.
+     *
+     * @param uri  the request URI containing the query parameter (?name=value)
+     * @param time if true, includes the current date in the response
+     * @return an HTTP response string with status, headers, and JSON body
+     */
     public static String greetingService(URI uri, boolean time){
         String user;
         try{
