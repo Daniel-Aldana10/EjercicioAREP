@@ -148,7 +148,7 @@ public class HttpServer {
         String response = "HTTP/1.1 200 OK \r\n" + "content-type: application/json; charset=utf-8\r\n"
                 + "\r\n";
         response = response + "{\"msg\": \"Hello " + user;
-        response = time? response +" the time is " + LocalDate.now() + "\"}":response+ "\"}";
+        response = time? response + "today's date is" + LocalDate.now() + "\"}":response+ "\"}";
         System.out.println(response);
         return response;
     }

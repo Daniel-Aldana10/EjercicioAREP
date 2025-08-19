@@ -30,7 +30,7 @@ public class HttpServerTest {
 
         assertTrue(response.contains("200 OK"));
         assertTrue(response.contains("Hello Ana"));
-        assertTrue(response.contains("the time is"));
+        assertTrue(response.contains("today's date is"));
     }
 
     @Test

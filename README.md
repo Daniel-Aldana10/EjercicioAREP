@@ -2,8 +2,8 @@
 
 Este proyecto implementa un **servidor HTTP sencillo** en Java, capaz de:
 - Atender peticiones GET y POST en rutas específicas (`/app/helloget` y `/app/hellopost`).
-- Retornar archivos estáticos desde el directorio `src/main/resources`.
-  - Retornar respuestas JSON.
+- Servir archivos estáticos desde el directorio `src/main/resources`.
+- Retornar respuestas JSON.
 
 ## Requisitos
 
@@ -62,6 +62,37 @@ mvn --version
    ```
    {"msg": "Hello Daniel"}
    ```
+   
+## Prueba de uso y respuesta
+
+Una vez corriendo la aplicacion nos dirigimos a http://localhost:35000
+
+![image](images/pantalla.png)
+
+Luego En el panel de red del navegador se pueden encontrar las peticiones realizadas al servidor.
+
+![image](images/peticiones.png)
+
+Luego hacemos una peticion con el formulario get 
+
+![image](images/get.png)
+
+Vemos la petición y la respuesta dada
+
+![image](images/getinfo.png)
+
+![image](images/response.png)
+
+Luego hacemos una peticion con el formulario post
+
+![image](images/post.png)
+
+Vemos la peticion y la respuesta dada
+
+![image](images/postinfo.png)
+
+![image](images/postresponse.png)
+
 ## Pruebas
 Se implementaron pruebas unitarias en src/test/java/HttpServerTest.java utilizando JUnit.
 
@@ -86,7 +117,18 @@ y expone endpoints dinámicos y estáticos.
 - Java
 - Maven
 - Junit 
-
+## Estructura
+```
+EjercicioAREP/
+├── src/
+│   ├── main/
+│   │   ├── java/com/mycompany/arep/HttpServer.java   # Servidor HTTP
+│   │   └── resources/                               # Archivos estáticos 
+│   └── test/
+│       └── java/HttpServerTest.java                 # Pruebas unitarias
+├── pom.xml                                          # Configuración Maven
+└── README.md                                        # Documentación
+```
 ## Autor
 
 Daniel Aldana — [GitHub](https://github.com/Daniel-Aldana10)
